@@ -2,10 +2,13 @@ from flask import Flask, request, render_template
 import numpy as np
 import joblib as jb
 from sklearn.preprocessing import LabelEncoder
+import pandas as pd
 
 # Load your trained model
 model = jb.load('model.joblib')
 le = LabelEncoder()
+food = pd.read_csv('food.csv')
+le.fit_transform(food['Country'])
 
 app = Flask(__name__)
 
@@ -46,7 +49,7 @@ def predict():
         prediction = model.predict(inputs)
         
         # Map the prediction back to a country name (if you have a mapping from label to country name)
-        country = le.inverse_transform(prediction[0])
+        country = le.inverse_transform(prediction)
 
         return render_template("result.html", prediction=country)
 
