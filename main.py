@@ -1,57 +1,35 @@
-from flask import Flask, request, render_template
-import numpy as np
+import streamlit as st
 import joblib as jb
 from sklearn.preprocessing import LabelEncoder
 import pandas as pd
+import numpy as np
 
-# Load your trained model
-model = jb.load('model.joblib')
+model = jb.load("food_model.joblib")
 le = LabelEncoder()
 food = pd.read_csv('food.csv')
-le.fit_transform(food['Country'])
+le.fit(food['Country'])
 
-app = Flask(__name__)
+features = ["Take-aways","Drinks","Dairy and Wheat","Fruits and Vegetables","Meat"]
 
-@app.route("/")
-def index():
-    return render_template("index.html")
+category_map = {'inexpensive': 0,'very cheap': 1,'cheap': 2, 'medium': 3, 'expensive': 4, 'very expensive': 5,'luxury': 6}
+features_map = {"Take-aways" : 3 , "Drinks" : 4 , "Dairy and Wheat" : 4, "Fruits and Vegetables" : 8 ,"Meat" : 2}
 
-@app.route("/predict", methods=["POST"])
-def predict():
-    if request.method == "POST":
-        # Get the input values from the form
-        meal_inexpensive = float(request.form["meal_inexpensive"])
-        meal_mid_range = float(request.form["meal_mid_range"])
-        mc_meal = float(request.form["mc_meal"])
-        coke = float(request.form["coke"])
-        water_small = float(request.form["water_small"])
-        milk = float(request.form["milk"])
-        bread = float(request.form["bread"])
-        eggs = float(request.form["eggs"])
-        cheese = float(request.form["cheese"])
-        water_big = float(request.form["water_big"])
-        chicken = float(request.form["chicken"])
-        apples = float(request.form["apples"])
-        oranges = float(request.form["oranges"])
-        potato = float(request.form["potato"])
-        lettuce = float(request.form["lettuce"])
-        cappuccino = float(request.form["cappuccino"])
-        rice = float(request.form["rice"])
-        tomato = float(request.form["tomato"])
-        banana = float(request.form["banana"])
-        onion = float(request.form["onion"])
-        beef = float(request.form["beef"])
+selected_features = []
 
-        # Put the inputs into a numpy array
-        inputs = np.array([meal_inexpensive, meal_mid_range, mc_meal, coke, water_small, milk, bread, eggs, cheese, water_big, chicken, apples, oranges, potato, lettuce, cappuccino, rice, tomato, banana, onion, beef]).reshape(1, -1)
+st.title("Categorize Features")
 
-        # Use the model to make a prediction
-        prediction = model.predict(inputs)
-        
-        # Map the prediction back to a country name (if you have a mapping from label to country name)
-        country = le.inverse_transform(prediction)
+reference_list = ["meal_inexpensive", "meal_mid_range", "mc_meal", "coke", "water_small", "milk", "bread", "eggs", "cheese", "water_big", "chicken", "apples", "oranges", "potato", "lettuce", "cappuccino", "rice", "tomato", "banana", "onion", "beef"]
 
-        return render_template("result.html", prediction=country)
+for feature in features:
+    category = st.selectbox(f"Categorize {feature}:", list(category_map.keys()))
+    for i in range(features_map[feature]):
+        reference_item = reference_list[i]
+        selected_features.append((reference_item, category_map[category]))
 
-if __name__ == "__main__":
-    app.run(debug=True)
+selected_features_sorted = sorted(selected_features, key=lambda x: reference_list.index(x[0]))
+selected_features_sorted = [f[1] for f in selected_features_sorted]
+predict = model.predict(np.array(selected_features_sorted).reshape(1, -1))
+prediction = le.inverse_transform(predict)
+
+st.write("Selected Features:")
+st.write(prediction)
