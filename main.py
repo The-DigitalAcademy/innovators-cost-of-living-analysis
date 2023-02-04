@@ -4,7 +4,7 @@ from sklearn.preprocessing import LabelEncoder
 import pandas as pd
 import numpy as np
 
-model = jb.load("food_model2.joblib")
+model = jb.load("models/food_model2.joblib")
 le = LabelEncoder()
 food = pd.read_csv('categories/food.csv')
 le.fit(food['Country'])
