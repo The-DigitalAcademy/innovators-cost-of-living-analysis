@@ -4,32 +4,26 @@ from sklearn.preprocessing import LabelEncoder
 import pandas as pd
 import numpy as np
 
-model = jb.load("food_model.joblib")
+model = jb.load("food_model2.joblib")
 le = LabelEncoder()
-food = pd.read_csv('food.csv')
+food = pd.read_csv('categories/food.csv')
 le.fit(food['Country'])
 
 features = ["Take-aways","Drinks","Dairy and Wheat","Fruits and Vegetables","Meat"]
 
-category_map = {'inexpensive': 0,'very cheap': 1,'cheap': 2, 'medium': 3, 'expensive': 4, 'very expensive': 5,'luxury': 6}
-features_map = {"Take-aways" : 3 , "Drinks" : 4 , "Dairy and Wheat" : 4, "Fruits and Vegetables" : 8 ,"Meat" : 2}
+category_map = {'cheap': 0, 'medium': 1, 'expensive': 2, 'very expensive': 3}
+
 
 selected_features = []
 
-st.title("Categorize Features")
-
-reference_list = ["meal_inexpensive", "meal_mid_range", "mc_meal", "coke", "water_small", "milk", "bread", "eggs", "cheese", "water_big", "chicken", "apples", "oranges", "potato", "lettuce", "cappuccino", "rice", "tomato", "banana", "onion", "beef"]
-
 for feature in features:
     category = st.selectbox(f"Categorize {feature}:", list(category_map.keys()))
-    for i in range(features_map[feature]):
-        reference_item = reference_list[i]
-        selected_features.append((reference_item, category_map[category]))
+    
+    selected_features.append((category_map[category]))
 
-selected_features_sorted = sorted(selected_features, key=lambda x: reference_list.index(x[0]))
-selected_features_sorted = [f[1] for f in selected_features_sorted]
-predict = model.predict(np.array(selected_features_sorted).reshape(1, -1))
-prediction = le.inverse_transform(predict)
+predict_proba = model.predict_proba(np.array(selected_features).reshape(1, -1))
+top_10_predictions = np.argsort(predict_proba[0])[-10:][::-1]
+top_10_prediction_labels = le.inverse_transform(top_10_predictions)
 
-st.write("Selected Features:")
-st.write(prediction)
+st.write("Top 10 Predictions:")
+st.write(top_10_prediction_labels)
