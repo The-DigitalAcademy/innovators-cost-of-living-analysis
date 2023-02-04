@@ -7,7 +7,7 @@ from imblearn.over_sampling import SMOTE,RandomOverSampler
 import joblib as jb
 import pandas as pd
 
-food = pd.read_csv('food.csv')
+food = pd.read_csv('categories/food.csv')
 food['Take-aways'] = food[["Meal, Inexpensive Restaurant","Meal for 2 People, Mid-range Restaurant, Three-course","McMeal at McDonalds (or Equivalent Combo Meal)"]].sum(axis=1)
 food['Drinks'] = food[["Coke/Pepsi (0.33 liter bottle)","Water (0.33 liter bottle) ","Water (1.5 liter bottle)","Cappuccino (regular)"]].sum(axis=1)
 food['Dairy and Wheat'] = food[["Milk (regular), (1 liter)","Loaf of Fresh White Bread (500g)","Eggs (regular) (12)","Local Cheese (1kg)"]].sum(axis=1)
@@ -54,5 +54,5 @@ sm = SMOTE()
 x_smo ,y_smo = sm.fit_resample(x_re,y_re)
 new_model = RandomForestClassifier(random_state=123,n_estimators=100)
 new_model.fit(x_smo,y_smo)
-jb.dump(new_model,"food_model2.joblib")
+jb.dump(new_model,"models/food.joblib")
 print("model saved successfully")
