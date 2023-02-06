@@ -8,11 +8,11 @@ import joblib as jb
 import pandas as pd
 
 food = pd.read_csv('categories/food.csv')
-food['Take-aways'] = food[["Meal, Inexpensive Restaurant","Meal for 2 People, Mid-range Restaurant, Three-course","McMeal at McDonalds (or Equivalent Combo Meal)"]].sum(axis=1)
-food['Drinks'] = food[["Coke/Pepsi (0.33 liter bottle)","Water (0.33 liter bottle) ","Water (1.5 liter bottle)","Cappuccino (regular)"]].sum(axis=1)
-food['Dairy and Wheat'] = food[["Milk (regular), (1 liter)","Loaf of Fresh White Bread (500g)","Eggs (regular) (12)","Local Cheese (1kg)"]].sum(axis=1)
-food['Fruits and Vegetables'] = food[["Apples (1kg)","Oranges (1kg)","Potato (1kg)","Lettuce (1 head)","Rice (white), (1kg)","Tomato (1kg)","Banana (1kg)","Onion (1kg)"]].sum(axis=1)
-food['Meat'] = food[["Chicken Breasts (Boneless, Skinless), (1kg)","Beef Round (1kg) (or Equivalent Back Leg Red Meat)"]].sum(axis=1)
+food['Take-aways'] = food[["Meal, Inexpensive Restaurant","Meal for 2 People, Mid-range Restaurant, Three-course","McMeal at McDonalds (or Equivalent Combo Meal)"]].mean(axis=1)
+food['Drinks'] = food[["Coke/Pepsi (0.33 liter bottle)","Water (0.33 liter bottle) ","Water (1.5 liter bottle)","Cappuccino (regular)"]].mean(axis=1)
+food['Dairy and Wheat'] = food[["Milk (regular), (1 liter)","Loaf of Fresh White Bread (500g)","Eggs (regular) (12)","Local Cheese (1kg)"]].mean(axis=1)
+food['Fruits and Vegetables'] = food[["Apples (1kg)","Oranges (1kg)","Potato (1kg)","Lettuce (1 head)","Rice (white), (1kg)","Tomato (1kg)","Banana (1kg)","Onion (1kg)"]].mean(axis=1)
+food['Meat'] = food[["Chicken Breasts (Boneless, Skinless), (1kg)","Beef Round (1kg) (or Equivalent Back Leg Red Meat)"]].mean(axis=1)
 food = food[["Take-aways","Drinks","Dairy and Wheat","Fruits and Vegetables","Meat","Country","Capital"]]
 x = food.drop(['Country','Capital'],axis=1)
 

@@ -1,0 +1,161 @@
+,"Basic (Electricity, Heating, Cooling, Water, Garbage) for 85m2 Apartment","Mortgage Interest Rate in Percentages (%), Yearly, for 20 Years Fixed-Rate",Country,Capital
+0,102.17,10.29, Russia,Saint Petersburg
+1,59.33,19.08, Turkey,Istanbul
+2,51.07,22.23, Turkey,Izmir
+3,82.66,1.38, Finland,Helsinki
+4,113.46,9.42, Moldova,Chisinau
+5,163.97,1.95, Italy,Milan
+6,25.79,13.42, Egypt,Cairo
+7,141.04,4.46, Bosnia And Herzegovina,Banja Luka
+8,42.65,8.21, Azerbaijan,Baku
+9,22.64,11.24, Mexico,Guadalajara
+10,24.92,11.06, Nepal,Kathmandu
+11,67.49,8.39, Vietnam,Hanoi
+12,51.25,9.15, Vietnam,Ho Chi Minh City
+13,30.09,11.28, Mexico,Mexico City
+14,171.15,2.12, Italy,Rome
+15,49.81,10.25, Mexico,Monterrey
+16,113.13,10.56, Russia,Yekaterinburg
+17,140.53,4.6, Bosnia And Herzegovina,Sarajevo
+18,117.46,19.1, Ukraine,Kharkiv
+19,98.74,19.52, Ukraine,Kiev
+20,132.57,3.48, Canada,Calgary
+21,30.66,9.23, Tunisia,Tunis
+22,154.54,3.62, Canada,Edmonton
+23,169.18,2.33, Netherlands,Amsterdam
+24,135.76,3.99, Serbia,Belgrade
+25,94.58,19.0, Ukraine,Odessa
+26,170.29,1.63, France,Paris
+27,168.08,2.41, Netherlands,Eindhoven
+28,79.71,4.11, Bulgaria,Plovdiv
+29,160.39,4.56, Greece,Thessaloniki
+30,102.76,3.63, Canada,Ottawa
+31,89.74,3.51, Bulgaria,Sofia
+32,153.76,2.21, Netherlands,Rotterdam
+33,75.54,4.28, Bulgaria,Varna
+34,122.93,3.49, Serbia,Novi Sad
+35,193.84,2.55, Netherlands,Utrecht
+36,231.8,1.85, Germany,Berlin
+37,122.43,7.35, Lebanon,Beirut
+38,124.12,4.09, United States,"Austin, TX"
+39,97.79,2.52, Singapore,Singapore
+40,95.48,3.33, Canada,Toronto
+41,99.55,4.22, New Zealand,Auckland
+42,103.09,6.55, Montenegro,Podgorica
+43,62.72,3.78, Canada,Vancouver
+44,162.41,1.46, Japan,Tokyo
+45,78.71,3.7, Canada,Victoria
+46,87.74,3.45, Canada,Winnipeg
+47,119.59,4.22, United States,"Boston, MA"
+48,117.08,4.23, United States,"Chicago, IL"
+49,58.48,15.4, Kazakhstan,Almaty
+50,158.58,2.81, Norway,Oslo
+51,265.52,1.91, Germany,Frankfurt
+52,180.44,1.58, Slovakia,Bratislava
+53,139.51,4.19, United States,"Dallas, TX"
+54,174.07,3.9, Croatia,Zagreb
+55,232.62,1.88, Germany,Hamburg
+56,173.28,4.07, Poland,Krakow (Cracow)
+57,172.23,2.47, Latvia,Riga
+58,169.9,4.13, Poland,Gdansk
+59,89.62,3.73, Chile,Santiago
+60,46.9,13.86, Kenya,Nairobi
+61,116.51,4.07, United Arab Emirates,Abu Dhabi
+62,122.34,4.14, United States,"Houston, TX"
+63,52.69,12.37, Georgia,Tbilisi
+64,156.63,4.32, United Arab Emirates,Dubai
+65,76.59,11.48, Colombia,Bogota
+66,145.16,2.74, Czech Republic,Brno
+67,242.66,1.76, Germany,Munich
+68,155.6,4.03, Poland,Poznan
+69,138.51,4.31, United States,"Las Vegas, NV"
+70,186.96,3.31, United Kingdom,London
+71,111.99,4.13, United States,"Los Angeles, CA"
+72,90.98,5.26, Panama,Panama City
+73,150.79,3.56, South Korea,Seoul
+74,147.35,4.05, Poland,Warsaw
+75,177.27,2.71, Czech Republic,Prague
+76,162.51,3.71, Poland,Wroclaw
+77,48.02,4.6, Malaysia,Kuala Lumpur
+78,116.65,4.17, United States,"New York, NY"
+79,196.67,1.62, Denmark,Copenhagen
+80,199.61,3.19, Slovenia,Ljubljana
+81,60.44,9.35, India,Chandigarh
+82,37.91,14.45, Sri Lanka,Colombo
+83,61.65,9.21, India,Noida
+84,122.48,2.48, Lithuania,Kaunas
+85,138.77,4.73, Greece,Athens
+86,161.5,4.2, United States,"Phoenix, AZ"
+87,176.27,2.56, Hong Kong,Hong Kong
+88,150.98,4.18, United States,"Portland, OR"
+89,99.29,2.11, Portugal,Lisbon
+90,55.03,5.14, China,Beijing
+91,62.35,10.64, South Africa,Cape Town
+92,68.27,5.19, Albania,Tirana
+93,101.15,2.59, Portugal,Porto
+94,76.88,10.64, South Africa,Durban
+95,147.94,4.82, Hungary,Budapest
+96,115.86,2.39, Lithuania,Vilnius
+97,83.28,10.41, South Africa,Johannesburg
+98,136.65,2.39, Spain,Barcelona
+99,123.99,4.11, United States,"San Diego, CA"
+100,127.73,4.18, United States,"San Francisco, CA"
+101,63.97,8.95, Peru,Lima
+102,144.15,4.14, United States,"Seattle, WA"
+103,100.39,4.7, Romania,Brasov
+104,89.13,6.32, Romania,Bucharest
+105,31.53,18.36, Uzbekistan,Tashkent
+106,47.94,9.75, India,Ahmedabad
+107,91.85,5.4, Romania,Cluj-Napoca
+108,119.87,2.13, Spain,Madrid
+109,175.25,2.39, Estonia,Tallinn
+110,22.24,9.19, India,Bangalore
+111,115.11,5.14, Romania,Iasi
+112,35.72,9.89, India,Chennai
+113,64.59,4.8, Qatar,Doha
+114,51.68,9.23, India,Delhi
+115,63.53,9.22, India,Gurgaon
+116,113.44,2.36, Spain,Valencia
+117,158.45,2.1, Austria,Vienna
+118,21.79,9.53, India,Hyderabad
+119,98.22,8.0, Uruguay,Montevideo
+120,197.25,3.67, Israel,Tel Aviv-Yafo
+121,95.29,5.15, Romania,Timisoara
+122,68.8,1.9, Taiwan,Taipei
+123,29.47,9.13, India,Kolkata
+124,107.26,5.52, Macedonia,Skopje
+125,51.7,5.08, China,Shanghai
+126,88.89,5.57, Thailand,Bangkok
+127,47.45,9.21, India,Mumbai
+128,88.14,6.3, Iceland,Reykjavik
+129,80.62,7.91, Jordan,Amman
+130,26.65,9.27, India,Pune
+131,75.9,2.46, Sweden,Stockholm
+132,68.07,48.69, Argentina,Buenos Aires
+133,48.29,14.63, Belarus,Minsk
+134,65.12,9.45, Costa Rica,San Jose
+135,35.74,4.87, Morocco,Casablanca
+136,172.01,3.77, Poland,Lodz
+137,66.62,3.46, Canada,Montreal
+138,54.21,9.67, Brazil,Sao Paulo
+139,51.69,2.8, Sweden,Gothenburg
+140,169.12,3.43, Ireland,Dublin
+141,126.36,10.07, Russia,Moscow
+142,53.67,12.38, Dominican Republic,Santo Domingo
+143,119.44,4.1, Australia,Adelaide
+144,162.87,1.57, Switzerland,Zurich
+145,60.06,11.59, Armenia,Yerevan
+146,120.87,8.0, Philippines,Manila
+147,108.52,4.02, Australia,Brisbane
+148,96.12,10.0, Indonesia,Jakarta
+149,54.61,20.19, Turkey,Ankara
+150,88.45,18.96, Ukraine,Lviv
+151,94.51,10.79, Russia,Novosibirsk
+152,67.46,19.05, Turkey,Bursa
+153,122.98,1.68, Belgium,Brussels
+154,166.88,3.75, Israel,Jerusalem
+155,127.87,4.11, Australia,Melbourne
+156,129.02,4.31, Australia,Perth
+157,110.7,3.82, Australia,Sydney
+158,18.56,16.17, Egypt,Alexandria
+159,39.64,10.71, Ecuador,Quito
